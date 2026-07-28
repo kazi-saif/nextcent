@@ -1,0 +1,592 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Prevents 100% width + padding from overflowing */
+    font-family: sans-serif;
+}
+
+/* Nav section starts here */
+.navber {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;             /* Fixed: added % */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 100;
+    background-color: #f5f7fa;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: gray;
+    display: inline-block;   /* Fixed: allows transform scale to work */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-list a:hover {          /* Fixed: added missing hyphen */
+    transform: scale(1.1);
+    color: green;
+}
+.logn-sngp{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.logn-sngp a{
+    text-decoration: none;
+    color: #4caf4f;
+}
+
+.logn-sngp .btn {
+    border: 1px solid #4caf4f;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #4caf4f;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.logn-sngp .btn:hover {
+    transform: scale(1.1);
+    background-color: white;
+    color: #4caf4f;          /* Fixed: removed duplicate color rule */
+}
+
+
+
+
+/* hero section start here  */
+
+.hero {
+    min-height: 50vh;
+    background-color: rgba(243, 242, 242, 0.89);
+    display: flex; /* Applied layout directly to .hero */
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative; /* Useful if positioning dots at the bottom */
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 48px; /* Adjusted slightly for better responsiveness */
+    color: #4a4a51;
+    line-height: 1.2;
+}
+
+.hero-content span {
+    color: #4CAF4F;
+}
+
+.hero-content p {
+    color: gray;
+    font-size: 18px;
+}
+
+.hero-content .btn {
+    text-decoration: none;
+    display: inline-block; /* Required for transform scale to work on <a> */
+    border: 1px solid #4CAF4F;
+    border-radius: 8px;
+    padding: 12px 28px;
+    background-color: #4CAF4F;
+    color: white; 
+    width: fit-content; /* Replaced fixed 107px width */
+    font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    transform: scale(1.05);
+    background-color: white;
+    color: #4CAF4F;
+}
+
+.img-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dot {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* <!-- HERO SECTION ensd --> */
+
+
+/* client section start here  */
+
+
+.client-heading {
+   text-align: center;
+   margin:80px;
+   display:flex;
+   flex-direction: column;
+   gap:20px;
+}
+
+.client-heading p{
+    color: gray;
+}
+
+.div-icon{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding:20px auto;
+    gap:0px;
+    margin-bottom:0px;
+}
+
+.container{
+    text-align: center;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    
+    flex-direction: column;
+    gap:10px;
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 4px 15px rgba(74, 74, 81, 0.2);
+    border-radius: 20px;
+    padding:25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card img{
+    padding:15px;
+}
+
+.card h3{
+    padding:10px;
+    color: #455a64;
+}
+.card p{
+    padding:10px;
+    color:gray;
+}
+
+/* client section end here  */
+
+
+/* <!-- ACHIVEMENT SECTION STARTS --> */
+
+
+
+/* .hero-title .l-btn{
+    width:160px;
+} */
+#hero{
+    margin-top: 50px;
+}
+
+.a-hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 10px auto 0;
+    gap: 100px;
+}
+
+.a-title .l-btn{
+    width:160px;
+}
+
+.a2-hero{
+    margin-top: 90px;   
+}
+/* <!-- ACHIVEMENT SECTION ENDS -->   */
+
+
+
+
+
+
+
+/* <!-- HELPING SECTION STARTS -->  */
+
+.helping span{
+    color:#4CAF4F;
+}
+
+.h-container{
+    background-color:#f5f7fa;
+    margin-top: 70px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-stats{
+    margin-top:40px;
+    padding: 40px;
+    display:flex;
+    flex-wrap: wrap;
+    gap:20px;
+
+}
+
+.stat-icon{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 0 0 calc(50% - 15px);
+}
+
+.stat-icon img{
+    width: 50px;
+    height: 50px;
+}
+
+.stat h3{
+    margin: 0;
+    font-size: 24px;
+    color: #263238;
+}
+
+.stat p{
+    margin: 5px 0 0;
+    color: #717171;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+   /* <!-- MEET CUSTOMERS SECTION STARTS --> */
+#meet-customers{
+    margin-top: 100px;
+    padding: 80px 100px;
+    background-color: #f5f7fa;
+}
+
+.cus-container{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.div1{
+    flex: 1;
+}
+
+.div1 img{
+    width: 100%;
+    max-width: 350px;
+    display: block;
+}
+
+.div2{
+    flex: 2;
+}
+
+.des{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.des p{
+    color: #717171;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+}
+
+.des h5{
+    color: #4CAF4F;
+    font-size: 20px;
+    margin: 0;
+}
+
+
+/* icons section */
+.icons-cus{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.icons-cus img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+
+/* meet all customers + arrow */
+.icons-cus p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #4CAF4F;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.icons-cus p img{
+    width: 20px;
+    height: 20px;
+}
+
+
+/* <!-- MEET CUSTOMERS SECTION ENDS --> */
+
+
+
+
+
+
+
+
+
+
+/* BLOG */
+
+.blog{
+    padding: 80px 100px;
+    background-color: #f5f7fa;
+}
+
+.blog-header{
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.blog-header h2{
+    font-size: 36px;
+    color: #263238;
+    margin-bottom: 20px;
+}
+
+.blog-header p{
+    color: #717171;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+/* Blog Cards */
+
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+
+.blog-cards{
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.6 ease-in-out;
+}
+
+
+.blog-cards:hover{
+    transform: scale(1.05);
+}
+
+
+.blog-cards img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.blog-cards h3{
+    font-size: 20px;
+    color: #263238;
+    padding: 20px 25px;
+    line-height: 1.4;
+    margin: 0;
+
+    min-height: 80px;
+}
+
+
+.special-link{
+    margin-top: auto;
+    text-decoration: none;
+    color: #4CAF4F;
+    font-size: 18px;
+    font-weight: 600;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.special-link i{
+    font-size: 16px;
+}
+
+
+/* CTA Section */
+
+.cta{
+    padding: 70px 100px;
+    text-align: center;
+    background-color: #f5f7fa;
+}
+
+.cta h2{
+    font-size: 40px;
+    color: #263238;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+
+.cta .btn{
+    display: inline-block;
+    background-color: #4CAF4F;
+    color: white;
+    padding: 14px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.cta .btn:hover{
+    transform : scale(1.1);
+    color: green;
+    background-color: white;
+    color:#4CAF4F;
+    border: 1px solid #4CAF4F;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #263238;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px ;
+}
+
+footer div img{
+    width: 140px;
+    margin-bottom: 20px;
+
+}
+.footer p {
+    color: #f5f7fa;
+    margin-bottom: 20px;
+}
+
+
+.footer-icon {
+    display:flex;
+    gap:12px;
+}
+
+.footer-icon i:hover{
+    color:green;
+
+}
+
+.footer li, .footer h3 {
+    margin-bottom: 10px;
+}
+
+
+
+.f-div1 img{
+    padding:10px;
+}
+
+.f-div1 p{
+    font-size: 15px;
+}
+
+ul{
+    padding:20px;
+    list-style:none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer > div:first-child {
+    max-width: 250px;
+}
+.footer input {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #515b60;
+    color: white;
+}
+
+.email-box{
+    position: relative;
+    width: 300px;
+}
+
+.email-box img{
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+}
+
+.email-box input{
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.time{
+    color:#028d07;
+}
